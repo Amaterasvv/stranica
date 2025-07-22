@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kode Black</title>
+  <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <img src="conten/logogogo.png" alt="Kode Black" />
+      </a>
+
+      <nav class="nav-links">
+         <a href="#istrazi">ISTRAZI</a>
+         <a href="#usluge">PONUDA I USLUGE</a>
+        <a href="#kontakt">KONTAKT</a>
+        <a href="#onama">O NAMA</a>
+        <a href="#pomoc">POMOC</a>
+       
+      </nav>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu">  
+      <a href="#istrazi" onclick="toggleMenu()">ISTRAŽI</a>
+      <a href="#usluge" onclick="toggleMenu()">PONUDA I USLUGE</a>
+      <a href="#kontakt" onclick="toggleMenu()">KONTAKT</a>
+      <a href="#onama" onclick="toggleMenu()">O NAMA</a>
+      <a href="#pomoc" onclick="toggleMenu()">POMOĆ</a>
+    
+    </div>
+  </header>
+
+  
+  <section class="hero-small" id="hero">
+    <div class="hero-text animated-text">
+
+      <h1><span class="highlight">Kode Black</span> – Izrada web stranica koje ostavljaju dojam</h1>
+      <p class="subheading">Za obrte, salone, frizere, kafiće i male biznise – brzo, moderno i pristupačno.</p>
+
+      <div class="cta-buttons">
+        <a href="#usluge" class="hero-btn primary">ZatraZi ponudu</a>
+        <a href="#kontakt" class="hero-btn secondary">dogovorite sastanak</a>
+      </div>
+
+      <div class="hero-tags">
+        <span class="tag">Web dizajn</span>
+        <span class="tag">SEO OPTIMIZACIJA</span>
+        <span class="tag">BRZA IZRADA</span>
+      </div>
+
+      <p class="client-count">Novi tim, ali s jasnom vizijom i rezultatima koji govore.</p>
+    </div>
+
+    <div class="video-row">
+      <div class="video-wrapper from-left">
+        <video autoplay muted loop playsinline class="bg-video-small">
+          <source src="12359943_1920_1080_24fps.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="video-wrapper from-right">
+        <video autoplay muted loop playsinline class="bg-video-small">
+          <source src="7534244-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    
+<section id="istrazi" class="section">
+  <h2 class="kontaktnaslov">Naši radovi</h2>
+  <div class="slider-container">
+    <button class="slider-btn prev">&#10094;</button>
+    <div class="slider-track">
+      <div class="slider-item">
+        <div class="slider-inner">
+          <img src="logo_1.png" alt="Rad 1" />
+          <div class="slider-caption">PEKARA KAJZOGAJ</div>
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-inner">
+          <img src="logo_2.png" alt="Rad 2" />
+          <div class="slider-caption">OPG MERCLUFT</div>
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-inner">
+          <img src="logo_3.png" alt="Rad 3" />
+          <div class="slider-caption">FRIZER AJLA</div>
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-inner">
+          <img src="logo_4.png" alt="Rad 4" />
+          <div class="slider-caption">KAFIĆ LAGUNA</div>
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-inner">
+          <img src="logo_5.png" alt="Rad 5" />
+          <div class="slider-caption">AUTO SERVIS IVICA</div>
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-inner">
+          <img src="logo_6.png" alt="Rad 6" />
+          <div class="slider-caption">ZLATARNA MARINA</div>
+        </div>
+      </div>
+      <div class="slider-item">
+        <div class="slider-inner">
+          <img src="logo_1.png" alt="Rad 6" />
+          <div class="slider-caption">ZLATARNA MARINA</div>
+        </div>
+      </div>
+    </div>
+    <button class="slider-btn next">&#10095;</button>
+  </div>
+</section>
+
+<section class="usluge-section" id="usluge">
+  <h2 class="kontaktnaslov">Naše usluge</h2>
+  <div class="usluge-grid">
+    <div class="usluga-card">
+      <div class="usluga-icon">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4 5h16v2H4zM4 9h10v2H4zM4 13h16v2H4zM4 17h10v2H4z" />
+        </svg>
+      </div>
+      <h3>Izrada web stranica</h3>
+      <p>Moderni, responzivni i brzi webovi, prilagođeni svim uređajima.</p>
+    </div>
+
+    <div class="usluga-card">
+      <div class="usluga-icon">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2a10 10 0 1 1-0.001 20.001A10 10 0 0 1 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" />
+        </svg>
+      </div>
+      <h3>UI/UX dizajn</h3>
+      <p>Profesionalan izgled i intuitivno korisničko iskustvo za bolje rezultate.</p>
+    </div>
+
+    <div class="usluga-card">
+      <div class="usluga-icon">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 3h18v2H3V3zm2 4h14v14H5V7zm2 2v10h10V9H7z" />
+        </svg>
+      </div>
+      <h3>Web aplikacije</h3>
+      <p>Login sustavi, registracija i baze podataka po potrebi klijenta.</p>
+    </div>
+
+    <div class="usluga-card">
+      <div class="usluga-icon">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M2 4h20v2H2V4zm2 4h16v2H4V8zm-2 4h20v2H2v-2zm2 4h16v2H4v-2z" />
+        </svg>
+      </div>
+      <h3>Registracija domene i hosting</h3>
+      <p>Pomažemo u kupnji domene i postavljanju web stranice na internet.</p>
+    </div>
+
+    <div class="usluga-card">
+      <div class="usluga-icon">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3z" />
+        </svg>
+      </div>
+      <h3>Održavanje i podrška</h3>
+      <p>Stalna tehnička podrška i održavanje nakon objave stranice.</p>
+    </div>
+
+    <div class="usluga-card">
+      <div class="usluga-icon">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4 4h16v2H4zm0 4h10v2H4zm0 4h16v2H4zm0 4h10v2H4z" />
+        </svg>
+      </div>
+      <h3>Digitalni marketing i SEO</h3>
+      <p>Vaša stranica se pojavljuje na Googleu i privlači više klijenata.</p>
+    </div>
+
+    <div class="usluga-card">
+      <div class="usluga-icon">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M16 3H8v2h8V3zM3 7h18v14H3V7zm2 2v10h14V9H5z" />
+        </svg>
+      </div>
+      <h3>Društvene mreže</h3>
+      <p>Otvaranje i vođenje profila, izrada vizuala i objava sadržaja.</p>
+    </div>
+
+    <div class="usluga-card">
+      <div class="usluga-icon">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6 2h12v2H6zm0 4h12v2H6zM3 9h18v13H3V9zm2 2v9h14v-9H5z" />
+        </svg>
+      </div>
+      <h3>Izrada web shopa</h3>
+      <p>Online trgovine s košaricom, plaćanjem i jednostavnim upravljanjem proizvodima.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="kontakt" class="kontakt-section">
+   <h2 class="kontaktnaslov">Kontakt</h2>
+    <div class="kontakt-container">
+      
+<div class="kontakt-forma-box">
+  <h2>Pošaljite nam poruku</h2>
+ <form id="kontakt-form">
+  <div class="kontakt-polje-duplo">
+    <div class="form-polje">
+      <label for="ime">Ime</label>
+      <input type="text" id="ime" name="ime" placeholder="Vaše ime" required />
+    </div>
+    <div class="form-polje">
+      <label for="prezime">Prezime</label>
+      <input type="text" id="prezime" name="prezime" placeholder="Vaše prezime" required />
+    </div>
+  </div>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="vas.email@example.com" required />
+
+  <label for="telefon">Telefon</label>
+  <input type="tel" id="telefon" name="telefon" placeholder="0912345678" pattern="^[0-9]{8,15}$" required />
+
+  <label for="usluga">Usluga</label>
+  <select id="usluga" name="usluga" required>
+    <option value="">Odaberite uslugu</option>
+    <option value="web">Izrada web stranice</option>
+    <option value="seo">SEO optimizacija</option>
+    <option value="branding">Vizualni identitet</option>
+  </select>
+
+  <label for="poruka">Poruka</label>
+  <textarea id="poruka" name="poruka" placeholder="Opišite svoj projekt..." required></textarea>
+
+  <button type="submit">Pošaljite poruku</button>
+  <p id="form-message" class="form-message"></p>
+</form>
+
+</div>
+
+
+    <div class="kontakt-info">
+      <h2>INFORMACIJE</h2>
+
+      <div class="info-blok">
+        <p class="info-naslov"> Email</p>
+        <p><img src="email.png" alt="Email ikona"> kodeblackinfo@gmail.com</p>
+      </div>
+
+      <div class="info-blok">
+        <p class="info-naslov"> Telefon</p>
+        <p><img src="phone-call.png" alt="Telefon ikona"> +385 98 978 9387</p>
+      </div>
+
+      <div class="info-blok">
+        <p class="info-naslov"> Lokacija</p>
+        <p><img src="gps.png" alt="Lokacija ikona"> Pakrac, Hrvatska</p>
+      </div>
+
+      <div class="info-blok">
+        <p class="info-naslov"> Radno vrijeme</p>
+        <p><img src="clock.png" alt="Sat ikona"> Pon - Sub: 8:00 - 18:00</p>
+      </div>
+
+      <div class="kontakt-brzi-odgovor">
+        <strong>✅ Brz odgovor</strong>
+        <p>Odgovaramo na sve upite u roku od 24 sata. Za hitne projekte, kontaktirajte nas telefonski.</p>
+      </div>
+    </div>
+  </div>
+<div class="kontakt-mapa">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.041983465951!2d17.1856846!3d45.4374191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4767cf9f8a222f8d%3A0x5b88c91ff41dba5f!2sPakrac!5e0!3m2!1shr!2shr!4v1721552224745!5m2!1shr!2shr" 
+    width="100%" 
+    height="300" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+</section>
+
+
+
+
+<section id="pomoc" class="section">
+  <h2 class="kontaktnaslov">Pomoć i Podrška</h2>
+  <p>Ovdje možete pronaći često postavljana pitanja, vodiče za korištenje stranice i kontakt za podršku.</p>
+
+  <div class="faq">
+    <h3>Često postavljena pitanja</h3>
+    <ul>
+      <li><strong>Kako mogu urediti svoju stranicu?</strong><br>Dobivate admin pristup i detaljne upute za uređivanje sadržaja.</li>
+      <li><strong>Kako mogu promijeniti slike ili tekst?</strong><br>Putem CMS sučelja jednostavno unosite nove slike ili tekstove.</li>
+      <li><strong>Što ako mi stranica ne radi na mobitelu?</strong><br>Kontaktirajte nas i riješit ćemo problem unutar 24h.</li>
+      <li><strong>Kako dodati novi proizvod ili uslugu?</strong><br>Unutar admin panela imate opciju za dodavanje i uređivanje proizvoda.</li>
+      <li><strong>Mogu li povezati Instagram ili Facebook?</strong><br>Da, možemo ih ugraditi i povezati s vašim stranicama.</li>
+      <li><strong>Dobivam li Google kartu na stranici?</strong><br>Da, uključujemo lokaciju vašeg poslovanja putem Google Maps-a.</li>
+    </ul>
+  </div>
+
+  <div class="pomoc-grid-2x2">
+    <div class="box support-stats">
+      <h3>Statistika podrške</h3>
+      <ul>
+        <li><strong>150+</strong> riješenih korisničkih upita</li>
+        <li><strong>98%</strong> zadovoljnih korisnika</li>
+        <li><strong>24h</strong> prosječno vrijeme odgovora</li>
+      </ul>
+    </div>
+
+    <div class="box remote-support">
+      <h3>Daljinska podrška</h3>
+      <p>Za tehničke probleme možemo se povezati s vašim uređajem putem AnyDesk aplikacije.</p>
+      <p><a href="https://anydesk.com/en/downloads" target="_blank" class="btn-orange">Preuzmi AnyDesk</a></p>
+    </div>
+
+    <div class="box support-contact">
+      <h3>Kontakt podrške</h3>
+      <p>Imate problem ili pitanje? Slobodno nas kontaktirajte:</p>
+      <ul>
+        <li><i class="fas fa-envelope"></i> Email: podrska@kodblack.hr</li>
+        <li><i class="fas fa-phone"></i> Telefon: +385 91 123 4567</li>
+        <li><i class="fab fa-whatsapp"></i> WhatsApp: direktna poruka</li>
+      </ul>
+    </div>
+
+    <div class="box mini-form">
+      <h3>Imate dodatno pitanje?</h3>
+      <p>Pošaljite nam kratku poruku ako niste pronašli odgovor iznad:</p>
+      <form action="#" method="post">
+        <input type="text" placeholder="Vaše ime" required>
+        <input type="email" placeholder="Vaš email" required>
+        <textarea placeholder="Vaše pitanje..." required></textarea>
+        <button type="submit">Pošalji pitanje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<section id="o-nama" class="section-o-nama">
+  <div class="o-nama-container">
+    <h2 class="kontaktnaslov">O nama</h2>
+    <p class="uvod">Kode Black nije korporacija. Mi smo tim mladih ljudi, studenata s godinama iskustva u IT svijetu, koji ozbiljno shvaćaju ono što rade – i rade to s voljom.</p>
+
+    <div class="o-nama-flex">
+      <div class="o-nama-text">
+  <h3>Tko smo mi?</h3>
+  <p>Mi smo Kode Black – skupina studenata i mladih entuzijasta koji već gotovo desetljeće žive i dišu tehnologiju. Informatika, dizajn, web razvoj i podrška – to su naša svakodnevica.</p>
+
+  <p>Ne skrivamo se iza velikih imena i titula. Nismo “veliki igrači”, ali imamo ono što se ne može kupiti: motivaciju, znanje i iskrenu želju da napravimo nešto dobro – za vas i za nas.</p>
+
+  <h3>Naš pristup</h3>
+  <p>Svaki projekt radimo kao da je naš. Cijene koje nudimo su poštene jer znamo koliko početak može biti izazovan. Kod nas ne plaćate “priču” – plaćate konkretan rezultat.</p>
+
+  <p>Uloženi trud i kvaliteta daleko nadilaze ono što klasične ponude nude. Želimo da kad pogledate svoju stranicu, kažete: “Ovo vrijedi puno više.”</p>
+
+  <h3>Zašto to radimo?</h3>
+  <p>Zato što želimo rasti zajedno s vama. Svaka vaša preporuka, svaki zadovoljni korisnik, svaka izrađena stranica – naš su temelj za budućnost.</p>
+
+  <p>Ne birate agenciju. Birate ljude koji slušaju, razmišljaju, prilagođavaju se i daju sve od sebe. A to je, vjerujemo, najbolja investicija.</p>
+
+  <ul>
+    <li>Pristupačne cijene bez skrivenih troškova</li>
+    <li>Otvorena i jasna komunikacija</li>
+    <li>Fokus na funkcionalnost, estetiku i korisnost</li>
+    <li>Stranice koje izgledaju profesionalno i rade brzo</li>
+  </ul>
+</div>
+
+
+      <div class="o-nama-slika">
+        <img src="team-working-animation-project.jpg" alt="Naš tim">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dojmovi" class="section">
+  <h2 class="kontaktnaslov">Vaši dojmovi i prijedlozi</h2>
+  <p>Podijelite svoje iskustvo, pohvalu, prijedlog ili kritiku. Vaše mišljenje nam je važno!</p>
+
+  <form class="dojmovi-form" action="#" method="post">
+    <input type="text" name="ime" placeholder="Vaše ime (neobavezno)">
+    <textarea name="dojam" placeholder="Napišite svoj dojam..." required></textarea>
+
+    <div class="ocjena">
+      <label>Ocjena:</label>
+      <div class="zvjezdice">
+        <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+        <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+        <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label>
+        <input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label>
+        <input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label>
+      </div>
+    </div>
+
+    <button type="submit">Pošalji dojam</button>
+  </form>
+
+  <div class="dojmovi-lista">
+  <div class="dojam-kartica">
+    <p class="tekst-dojma">“Brzo, profesionalno i vrlo pristupačno. Preporuka svima!”</p>
+    <div class="autor-i-ocjena">
+      <span class="autor">Ana K.</span>
+      <span class="ocjena">★★★★★</span>
+    </div>
+  </div>
+
+  <div class="dojam-kartica">
+    <p class="tekst-dojma">“Odlično iskustvo. Web stranica je gotova prije roka.”</p>
+    <div class="autor-i-ocjena">
+      <span class="autor">Marko B.</span>
+      <span class="ocjena">★★★★☆</span>
+    </div>
+  </div>
+
+  <div class="dojam-kartica">
+    <p class="tekst-dojma">“Sve pohvale za ekipu. Jako susretljivi i profesionalni.”</p>
+    <div class="autor-i-ocjena">
+      <span class="autor">Ivana M.</span>
+      <span class="ocjena">★★★★★</span>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <p><strong>KodeBlack</strong> &copy; 2025. Sva prava pridržana.</p>
+    <ul class="footer-nav">
+      <li><a href="#o-nama">O nama</a></li>
+      <li><a href="#uvjeti">Uvjeti korištenja</a></li>
+      <li><a href="#privatnost">Privatnost</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
