@@ -1523,7 +1523,7 @@ grid-template-columns: repeat(2, 1fr);
   display: block;
   width: 50px;
   height: 3px;
-  background-color: #ff6600; /* ili boja brenda */
+  background-color: #ff6600;
   margin: 8px auto 0;
   border-radius: 2px;
 }
@@ -1534,9 +1534,10 @@ grid-template-columns: repeat(2, 1fr);
   margin-bottom: 30px;
 }
 
+/* Fixni grid: 3 kolone uvijek */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -1556,7 +1557,10 @@ grid-template-columns: repeat(2, 1fr);
   margin-top: 10px;
   font-size: 0.95rem;
   color: #333;
-}.gallery-row.tall-banners {
+}
+
+/* Visoki bannera - ostaju u redu */
+.gallery-row.tall-banners {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -1593,22 +1597,16 @@ grid-template-columns: repeat(2, 1fr);
   color: #333;
 }
 
-@media (max-width: 768px) {
-  .gallery-row.tall-banners {
-    flex-direction: column;
-  }
-
-  .gallery-item.tall {
-    flex: 1 1 100%;
-  }
-}
-.horizontal-banner {
+/* Horizontalni banner */
+.horizontal-banner,
+.horizontal-bannerr {
   margin-top: 30px;
   width: 100%;
   text-align: center;
 }
 
-.horizontal-banner img {
+.horizontal-banner img,
+.horizontal-bannerr img {
   width: 100%;
   max-height: 280px;
   object-fit: cover;
@@ -1617,41 +1615,26 @@ grid-template-columns: repeat(2, 1fr);
   transition: transform 0.3s ease;
 }
 
-.horizontal-banner img:hover {
-  transform: scale(1.02);
-}
-
-.horizontal-banner p {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #333;
-}
-
-
-.horizontal-bannerr {
-  margin-top: 30px;
-  width: 100%;
-  text-align: center;
-}
-
-.horizontal-bannerr img {
-  width: 100%;
-  max-height: 380px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
+.horizontal-banner img:hover,
 .horizontal-bannerr img:hover {
   transform: scale(1.02);
 }
 
+.horizontal-banner p,
 .horizontal-bannerr p {
   margin-top: 10px;
   font-size: 1rem;
   color: #333;
 }
+
+@media (max-width: 580px) {
+  .gallery-item p,
+  .horizontal-banner p,
+  .horizontal-bannerr p {
+    font-size: 0.7rem;
+  }
+}
+
 
 .mreze-section {
   padding: 50px 20px;
@@ -1953,4 +1936,107 @@ grid-template-columns: repeat(2, 1fr);
     height: auto;
     object-fit: contain; /* PRILAGODI se dimenzijama, ne seče */
   }
+}
+
+/* ====== Opšte sekcije ====== */
+.domena-hosting-uvod,
+.domena-hosting-ponuda,
+.domena-hosting-faq,
+.domena-hosting-bezbrige,
+.domena-hosting-cta {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.domena-hosting-uvod h2,
+.domena-hosting-ponuda h2,
+.domena-hosting-faq h2,
+.domena-hosting-bezbrige h2,
+.domena-hosting-cta h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.domena-hosting-uvod p,
+.domena-hosting-bezbrige p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* ====== Kružni proces ====== */
+.domena-hosting-proces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.proces-korak {
+  width: 110px;
+  height: 110px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.proces-strelica {
+  font-size: 20px;
+  align-self: center;
+  color: #999;
+}
+
+
+/* ====== FAQ sekcija ====== */
+.domena-hosting-faq ul {
+  list-style: none;
+  padding: 0;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.domena-hosting-faq li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 600px) {
+  .proces-korak {
+    width: 90px;
+    height: 90px;
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  .proces-strelica {
+    font-size: 16px;
+  }
+
+  .domena-hosting-uvod h2,
+  .domena-hosting-ponuda h2,
+  .domena-hosting-faq h2,
+  .domena-hosting-bezbrige h2,
+  .domena-hosting-cta h2 {
+    font-size: 22px;
+  }
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
