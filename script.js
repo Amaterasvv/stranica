@@ -221,3 +221,5 @@ document.querySelectorAll('.fade-in').forEach(el => observer1.observe(el));
 
 window.addEventListener("scroll", animateCards);
 window.addEventListener("load", animateCards);
+
+
