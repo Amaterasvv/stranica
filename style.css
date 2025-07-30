@@ -1341,6 +1341,34 @@ grid-template-columns: repeat(2, 1fr);
 }
 
 /* SEKCIJA: DOJMOVI */
+.dojmovi-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: flex-start;
+}
+
+.dojmovi-banner {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.dojmovi-video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.dojmovi-sadrzaj {
+  flex: 1 1 500px;
+  max-width: 700px;
+}
+
 #dojmovi {
   background: #ffffff;
   padding: 60px 20px;

@@ -502,56 +502,75 @@
     </div>
   </div>
 </section>
-
 <section id="dojmovi" class="section">
   <h2 class="kontaktnaslov">Vaši dojmovi i prijedlozi</h2>
   <p>Podijelite svoje iskustvo, pohvalu, prijedlog ili kritiku. Vaše mišljenje nam je važno!</p>
 
-  <form class="dojmovi-form" action="#" method="post">
-    <input type="text" name="ime" placeholder="Vaše ime (neobavezno)">
-    <textarea name="dojam" placeholder="Napišite svoj dojam..." required></textarea>
+  <div class="dojmovi-wrapper">
+    
+<div class="dojmovi-banner">
+  <video autoplay muted loop playsinline preload="auto" class="dojmovi-video">
+    <source src="conten/bannerzgbu.mp4" type="video/mp4" />
+    Vaš preglednik ne podržava video.
+  </video>
+</div>
 
-    <div class="ocjena">
-      <label>Ocjena:</label>
-      <div class="zvjezdice">
-        <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
-        <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
-        <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label>
-        <input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label>
-        <input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label>
+    <div class="dojmovi-sadrzaj">
+      <form class="dojmovi-form" action="#" method="post">
+        <input type="text" name="ime" placeholder="Vaše ime (neobavezno)">
+        <textarea name="dojam" placeholder="Napišite svoj dojam..." required></textarea>
+
+        <div class="ocjena">
+          <label>Ocjena:</label>
+          <div class="zvjezdice">
+            <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+            <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+            <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label>
+            <input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label>
+            <input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label>
+          </div>
+        </div>
+
+        <button type="submit">Pošalji dojam</button>
+      </form>
+
+      <div class="dojmovi-lista">
+        <div class="dojam-kartica">
+          <p class="tekst-dojma">“Brzo, profesionalno i vrlo pristupačno. Preporuka svima!”</p>
+          <div class="autor-i-ocjena">
+            <span class="autor">Ana K.</span>
+            <span class="ocjena">★★★★★</span>
+          </div>
+        </div>
+
+        <div class="dojam-kartica">
+          <p class="tekst-dojma">“Odlično iskustvo. Web stranica je gotova prije roka.”</p>
+          <div class="autor-i-ocjena">
+            <span class="autor">Marko B.</span>
+            <span class="ocjena">★★★★☆</span>
+          </div>
+        </div>
+
+        <div class="dojam-kartica">
+          <p class="tekst-dojma">“Sve pohvale za ekipu. Jako susretljivi i profesionalni.”</p>
+          <div class="autor-i-ocjena">
+            <span class="autor">Ivana M.</span>
+            <span class="ocjena">★★★★★</span>
+          </div>
+        </div>
+        <div class="dojam-kartica">
+          <p class="tekst-dojma">“Sve po dogovoru, dečki su uvijek aktivni.”</p>
+          <div class="autor-i-ocjena">
+            <span class="autor">Mario T.</span>
+            <span class="ocjena">★★★★★</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <button type="submit">Pošalji dojam</button>
-  </form>
-
-  <div class="dojmovi-lista">
-  <div class="dojam-kartica">
-    <p class="tekst-dojma">“Brzo, profesionalno i vrlo pristupačno. Preporuka svima!”</p>
-    <div class="autor-i-ocjena">
-      <span class="autor">Ana K.</span>
-      <span class="ocjena">★★★★★</span>
-    </div>
   </div>
-
-  <div class="dojam-kartica">
-    <p class="tekst-dojma">“Odlično iskustvo. Web stranica je gotova prije roka.”</p>
-    <div class="autor-i-ocjena">
-      <span class="autor">Marko B.</span>
-      <span class="ocjena">★★★★☆</span>
-    </div>
-  </div>
-
-  <div class="dojam-kartica">
-    <p class="tekst-dojma">“Sve pohvale za ekipu. Jako susretljivi i profesionalni.”</p>
-    <div class="autor-i-ocjena">
-      <span class="autor">Ivana M.</span>
-      <span class="ocjena">★★★★★</span>
-    </div>
-  </div>
-</div>
-
 </section>
+
 
 
 <footer class="footer">
@@ -573,5 +592,7 @@
 
 
   <script src="script.js"></script>
+  <script src="fade.js"></script>
+
 </body>
 </html>
