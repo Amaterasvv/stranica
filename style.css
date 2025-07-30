@@ -285,9 +285,12 @@ section {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+ cursor: pointer;
+  transition: transform 0.2s;
 }
-
+.video-wrapper:hover {
+  transform: scale(1.01);
+}
 .bg-video-small {
   width: 100%;
   height: auto;
