@@ -285,12 +285,9 @@ section {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
- cursor: pointer;
-  transition: transform 0.2s;
+  margin-bottom: 10px;
 }
-.video-wrapper:hover {
-  transform: scale(1.01);
-}
+
 .bg-video-small {
   width: 100%;
   height: auto;
@@ -1186,6 +1183,8 @@ grid-template-columns: repeat(2, 1fr);
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease-out;
+      text-decoration: none;
+
 }
 
 .box.visible {
@@ -1209,7 +1208,11 @@ grid-template-columns: repeat(2, 1fr);
 
 .remote-support .btn-orange:hover,
 .mini-form button:hover {
-  background-color: #e65c00;
+  background-color: #93908f;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+
+
 }
 
 .mini-form form {
@@ -1365,7 +1368,6 @@ grid-template-columns: repeat(2, 1fr);
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 
 .dojmovi-sadrzaj {
   flex: 1 1 500px;
