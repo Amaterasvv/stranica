@@ -20,34 +20,38 @@
 
 
   
-  <header class="navbar" id="hero">
-    <div class="nav-container">
-      <a href="#hero" class="logo">
-        <img src="conten/logogogo.png" alt="Kode Black" />
-      </a>
+<header class="navbar" id="hero">
+  <div class="nav-container">
+    <a href="#hero" class="logo">
+      <img src="conten/logogogo.png" alt="Kode Black" />
+    </a>
 
-      <nav class="nav-links">
-         <a href="#paketi">PAKETI</a>
-         <a href="#istrazi">USLUGE</a>
-        <a href="#kontakt">KONTAKT</a>
-        <a href="#onama">O NAMA</a>
-        <a href="#pomoc">POMOC</a>
-       
-      </nav>
-      
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
-  </header>
+    <nav class="nav-links">
+      <a href="#paketi">PAKETI</a>
+      <a href="#istrazi">USLUGE</a>
+      <a href="#kontakt">KONTAKT</a>
+      <a href="#onama">O NAMA</a>
+      <a href="#pomoc">POMOC</a>
+    </nav>
 
-     <div id="mobile-menu" class="mobile-menu">  
-      <a href="#paketi" onclick="toggleMenu()">PAKETI</a>
-      <a href="#istrazi" onclick="toggleMenu()">USLUGE</a>
-      <a href="#kontakt" onclick="toggleMenu()">KONTAKT</a>
-      <a href="#onama" onclick="toggleMenu()">O NAMA</a>
-      <a href="#pomoc" onclick="toggleMenu()">POMOĆ</a>
-    
+    <div class="hamburger" onclick="toggleMenu()">☰
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  
+  </div>
+</header>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="#paketi" onclick="toggleMenu()">PAKETI</a>
+  <a href="#istrazi" onclick="toggleMenu()">USLUGE</a>
+  <a href="#kontakt" onclick="toggleMenu()">KONTAKT</a>
+  <a href="#onama" onclick="toggleMenu()">O NAMA</a>
+  <a href="#pomoc" onclick="toggleMenu()">POMOC</a>
+</div>
+<div id="overlay" class="overlay"></div>
+
+
 <section class="hero-video-wrapper">
   <div class="hero-video">
     <video autoplay muted loop playsinline>

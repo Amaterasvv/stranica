@@ -1,7 +1,21 @@
 function toggleMenu() {
   const menu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("overlay");
+
   menu.classList.toggle("show");
+  overlay.classList.toggle("show");
 }
+document.getElementById("overlay").addEventListener("click", () => {
+  document.getElementById("mobile-menu").classList.remove("show");
+  document.getElementById("overlay").classList.remove("show");
+});
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".navbar");
+  header.style.opacity = 1;
+});
+
 
     const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
