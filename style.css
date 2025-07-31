@@ -12,6 +12,35 @@
   src: url('fonts/ArchivoBlack-Regular.ttf') format('truetype');
 }
 
+#preloader {
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.preloader-logo {
+  width: 300px;
+  height: auto;
+  animation: scaleFade 1.5s ease-in-out forwards;
+}
+
+@keyframes scaleFade {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.05); opacity: 0.9; }
+}
+
+
 
 
 html {
@@ -712,13 +741,13 @@ section {
   background: #e65500;
 }
 
-.fade-in {
+.fade-ins {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.fade-in.show {
+.fade-ins.show {
   opacity: 1;
   transform: translateY(0);
 }
@@ -892,6 +921,23 @@ section {
   color: #111;
   text-align: center;
 }
+.radio-grupa {
+  display: flex;
+  gap: 30px;
+    justify-content: center; /* ovo centrira horizontalno */
+
+  margin-bottom: 15px;
+}
+
+.radio-opcija {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #111;
+  font-size: 14px;
+}
+
 
 .switch-opcija {
   display: flex;

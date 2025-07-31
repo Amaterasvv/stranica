@@ -13,6 +13,13 @@
 </head>
 <body>
 
+<div id="preloader">
+  <img src="conten/loogo.png" alt="Logo" class="preloader-logo" />
+</div>
+
+
+
+  
   <header class="navbar" id="hero">
     <div class="nav-container">
       <a href="#hero" class="logo">
@@ -20,8 +27,8 @@
       </a>
 
       <nav class="nav-links">
-         <a href="#istrazi">ISTRAZI</a>
-         <a href="#usluge">PONUDA I USLUGE</a>
+         <a href="#paketi">PAKETI</a>
+         <a href="#istrazi">USLUGE</a>
         <a href="#kontakt">KONTAKT</a>
         <a href="#onama">O NAMA</a>
         <a href="#pomoc">POMOC</a>
@@ -33,8 +40,8 @@
   </header>
 
      <div id="mobile-menu" class="mobile-menu">  
-      <a href="#istrazi" onclick="toggleMenu()">ISTRAŽI</a>
-      <a href="#usluge" onclick="toggleMenu()">PONUDA I USLUGE</a>
+      <a href="#paketi" onclick="toggleMenu()">PAKETI</a>
+      <a href="#istrazi" onclick="toggleMenu()">USLUGE</a>
       <a href="#kontakt" onclick="toggleMenu()">KONTAKT</a>
       <a href="#onama" onclick="toggleMenu()">O NAMA</a>
       <a href="#pomoc" onclick="toggleMenu()">POMOĆ</a>
@@ -208,8 +215,6 @@
   </div>
 </section>
 
-<hr>
-
 
 
 
@@ -242,7 +247,7 @@
     <div class="slider-track">
       <div class="slider-item">
         <div class="slider-inner">
-          <img src="conten/logo_1.png" alt="Rad 1" />
+          <img src="conten/minipekara.png" alt="Rad 1" />
           <div class="slider-caption">  <a href="https://amaterasvv.github.io/kajzogaj/" target="_blank">PEKARA KAJZOGAJ</a></div>
         </div>
       </div>
@@ -254,20 +259,20 @@
       </div>
     <div class="slider-item">
         <div class="slider-inner">
-          <img src="conten/logo_5.png" alt="Rad 5" />
+          <img src="conten/mercluft.png" alt="Rad 5" />
           <div class="slider-caption">OPG MERCLUFT</div>
         </div>
       </div>
       <div class="slider-item">
         <div class="slider-inner">
-          <img src="conten/logo_6.png" alt="Rad 6" />
-          <div class="slider-caption">ZLATARNA MARINA</div>
+          <img src="conten/techmart.png" alt="Rad 6" />
+          <div class="slider-caption">TECH MART</div>
         </div>
       </div>
 
  <div class="slider-item">
   <div class="slider-inner">
-    <img src="conten/vizlogo.png" alt="Rad 3" />
+    <img src="conten/vizidentit.png" alt="Rad 3" />
     <div class="slider-caption">
       <a href="logo.html">VIZUALNI IDENTITETI</a>
     </div>
@@ -275,7 +280,7 @@
 </div>
       <div class="slider-item">
         <div class="slider-inner">
-          <img src="conten/ChatGPT Image 29. srp 2025. 11_11_45.png" alt="Rad 4" />
+          <img src="conten/dustv.png" alt="Rad 4" />
           <div class="slider-caption">
               <a href="drustvene.html">DIZAJN DRUŠTVENIH MREŽA </a>
           </div>
@@ -315,6 +320,30 @@
 
         <label for="telefon">Telefon</label>
         <input type="tel" id="telefon" name="telefon" placeholder="0912345678" pattern="^[0-9]{8,15}$" required />
+
+<label for="djelatnost">Čime se bavite?</label>
+<select id="djelatnost" name="djelatnost" required>
+  <option value="">Odaberite djelatnost</option>
+  <option value="obrt">Obrt</option>
+  <option value="firma">Tvrtka</option>
+  <option value="udruga">Udruga</option>
+  <option value="freelance">Freelancer / privatno</option>
+  <option value="drugo">Nešto drugo</option>
+</select>
+
+<label for="firma-status">Imate li registriranu firmu?</label>
+<div class="radio-grupa" id="firma-status">
+  <label class="radio-opcija">
+    <input type="radio" name="firma" value="da" required>
+    <span>Da</span>
+  </label>
+  <label class="radio-opcija">
+    <input type="radio" name="firma" value="ne" required>
+    <span>Ne</span>
+  </label>
+</div>
+
+
 
        <label for="usluga">Paket usluga</label>
 <select id="usluga" name="usluga" required>
