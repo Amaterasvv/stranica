@@ -71,10 +71,10 @@ let itemWidth;
 
 const setupSlider = () => {
   setTimeout(() => {
-    items = document.querySelectorAll('.slider-item'); // osvježi u slučaju promjena
+    items = document.querySelectorAll('.slider-item'); 
     itemWidth = items[0].getBoundingClientRect().width;
     updateSlider();
-  }, 100); // 100ms da se DOM stabilizira
+  }, 100); 
 };
 
 const updateSlider = () => {
@@ -82,18 +82,24 @@ const updateSlider = () => {
   track.style.transform = `translateX(-${itemWidth * index}px)`;
 };
 
+const getItemsPerView = () => {
+  const containerWidth = document.querySelector('.slider-container').offsetWidth;
+  return Math.floor(containerWidth / itemWidth);
+};
 const nextSlide = () => {
+  const itemsPerView = getItemsPerView();
   index++;
-  if (index >= items.length - 2) {
+  if (index > items.length - itemsPerView) {
     index = 0;
   }
   updateSlider();
 };
 
 const prevSlide = () => {
+  const itemsPerView = getItemsPerView();
   index--;
   if (index < 0) {
-    index = items.length - 3;
+    index = items.length - itemsPerView;
   }
   updateSlider();
 };
@@ -101,7 +107,7 @@ const prevSlide = () => {
 const startAutoplay = () => {
   autoplayInterval = setInterval(() => {
     nextSlide();
-  }, 4000);
+  }, 3000);
 };
 
 const stopAutoplay = () => {

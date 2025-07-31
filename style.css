@@ -384,23 +384,26 @@ section {
 
 .slider-item img {
   width: 100%;
-  max-height: 500px;  /* max visina, ali može biti manje */
-  height: auto;       /* visina automatska za proporcionalnost */
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  display: block;
-  transition: transform 0.5s ease; /* zadrži hover efekt */
+  height: 300px;
+  object-fit: contain;
+  background: #fff; 
+  padding: 10px;
+  transition: transform 0.5s ease; 
 }
 @media (max-width: 768px) {
   .slider-item img {
-    max-height: 280px; /* malo manja visina na manjim ekranima */
+    max-height: 280px;
   }
+  .slider-btn {
+    font-size: 18px !important;
+    padding: 6px 8px !important;
+  }
+
 }
 
 @media (max-width: 480px) {
   .slider-item img {
-    max-height: 120px; /* još manja visina na jako malim ekranima */
+    max-height: 220px; 
   }
 }
 
@@ -478,21 +481,21 @@ section {
 
 
 .slider-btn {
+  font-size: 32px;
+  padding: 10px 16px;
+  border-radius: 50%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #ff6600;
-  color: #fff;
+  background: #e55a00;
+  color: white;
   border: none;
-  font-size: 28px;
+  z-index: 10;
   cursor: pointer;
-  padding: 10px 18px;
-  border-radius: 50%;
-  z-index: 2;
 }
 
 .slider-btn:hover {
-  background: #e55a00;
+  background: #cb5b10;
 }
 
 .slider-btn.prev {
