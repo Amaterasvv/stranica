@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
     }, 750);
   }, 1500);
 
+  // Dodaj 'loaded' klasu slikama kad su spremne
   document.querySelectorAll('.project-image-wrapper img').forEach(img => {
     if (img.complete) {
       img.classList.add('loaded');
@@ -65,4 +66,48 @@ window.addEventListener("load", () => {
   });
 
   okviri.forEach(okvir => observer.observe(okvir));
+
+
+  // ====== DODATAK: PRVI TAP NA MOBITELU PRIKAŽI TITLE, DRUGI TAP OTVORI LINK ======
+  document.querySelectorAll('.grid-item').forEach(item => {
+    let tappedOnce = false;
+
+    item.addEventListener('click', function(event) {
+      if(window.innerWidth <= 768) {
+        if(!tappedOnce) {
+          event.preventDefault(); // spriječi odmah otvaranje linka
+          tappedOnce = true;
+
+          const title = item.querySelector('.project-title');
+          if (title) {
+            title.style.opacity = '1';
+            title.style.transform = 'translateY(0)';
+          }
+
+          // Sakrij title nakon 3 sekunde ako se ne klikne opet
+          setTimeout(() => {
+            tappedOnce = false;
+            if (title) {
+              title.style.opacity = '';
+              title.style.transform = '';
+            }
+          }, 3000);
+        } 
+        // ako je tappedOnce true, dopusti otvaranje linka (drugi tap)
+      }
+    });
+
+    // Klik izvan elementa resetira stanje i skriva title
+    document.addEventListener('click', (e) => {
+      if(!item.contains(e.target)) {
+        tappedOnce = false;
+        const title = item.querySelector('.project-title');
+        if (title) {
+          title.style.opacity = '';
+          title.style.transform = '';
+        }
+      }
+    });
+  });
+
 });
