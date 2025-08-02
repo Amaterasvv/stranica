@@ -50,4 +50,19 @@ window.addEventListener("load", () => {
       behavior: 'auto'
     });
   });
+
+  // 👉 ANIMACIJA OKVIRA kad uđu u viewport
+  const okviri = document.querySelectorAll('.okvir');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  okviri.forEach(okvir => observer.observe(okvir));
 });

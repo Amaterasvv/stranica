@@ -1375,7 +1375,21 @@ grid-template-columns: repeat(2, 1fr);
   border: 1px solid #ddd;
   box-sizing: border-box;
   overflow: hidden;
+
 }
+.okvir {
+  opacity: 0;
+  filter: blur(10px);
+  transform: scale(0.8);
+  transition: all 0.8s ease;
+}
+
+.okvir.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
 
 .okvir img {
   width: 100%;

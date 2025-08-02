@@ -159,4 +159,3 @@ sliderrr.addEventListener('input', () => {
   setInterval(slideSlider, 3000); // slide svakih 3 sekunde
 
 
-  
