@@ -139,6 +139,7 @@ sliderrr.addEventListener('input', () => {
   outputtt.textContent = value >= 1500 ? "1500+" : value;
 });
 
+
    const sliderTrackWrapper = document.getElementById('sliderTrack');
   const sliderCards = [...sliderTrackWrapper.children];
   const totalSliderItems = sliderCards.length;

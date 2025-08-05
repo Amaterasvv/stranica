@@ -405,6 +405,14 @@
 
 <section id="kontakt" class="kontakt-section">
   <h2 class="kontaktnaslov">Kontakt</h2>
+  <div class="kontakt-animacija">
+  <dotlottie-wc
+    src="https://lottie.host/6b80f0b5-0520-45ca-8fee-9115100fdd56/u1IaDPLNgI.lottie"
+    speed="1"
+    autoplay
+    loop
+  ></dotlottie-wc>
+</div>
   <div class="kontakt-container">
 
     <div class="kontakt-forma-box">
@@ -554,26 +562,24 @@
     </ul>
   </div>
 
-  <div class="pomoc-grid-2x2">
-    <div class="box support-stats">
-      <h3>Statistika podrške</h3>
-      <ul>
-        <li><strong>100+</strong> riješenih korisničkih upita</li>
-        <li><strong>98%</strong> zadovoljnih korisnika</li>
-        <li><strong>manje od 24h</strong> prosječno vrijeme odgovora</li>
-      </ul>
+
+
+  <div class="support-stats-wide">
+    <div class="stat">
+      <span class="count" data-target="124">0</span>
+      <p>riješenih korisničkih upita</p>
     </div>
-
-  <div class="box remote-support">
-  <h3>Daljinska podrška</h3>
-  <p>Za tehničke probleme možemo se povezati s vašim uređajem putem Discord ili TeamViewer aplikacije.</p>
-  
-  <div class="dugmad">
-    <a href="https://discord.com/download" target="_blank" class="btn-orange">Preuzmi Discord</a>
-    <a href="https://www.teamviewer.com/en/download/free-download-with-license-options/" target="_blank" class="btn-orange">Preuzmi TeamViewer</a>
+    <div class="stat">
+      <span class="count" data-target="18">0</span>
+      <p>zadovoljnih korisnika</p>
+    </div>
+    <div class="stat">
+      <span class="count" data-target="24">0</span>
+      <p>prosječno vrijeme odgovora (h)</p>
+    </div>
   </div>
-</div>
 
+  <div class="pomoc-grid-2x2">
 
     <div class="box support-contact">
       <h3>Kontakt podrške</h3>
@@ -740,7 +746,7 @@
   </div>
 </footer>
 
-
+  <script src="brojanje.js"></script>
   <script src="script.js"></script>
   <script src="fade.js"></script>
 
