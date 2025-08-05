@@ -166,7 +166,7 @@ body {
   }
   .nav-links {
     display: none;
-
+  }
     .hamburger {
   display: flex;
   flex-direction: column;
@@ -192,8 +192,8 @@ body {
 .hamburger:hover span {
   background: #a579ff;
 }
-  }
 }
+
 
 
 .mobile-menu {
