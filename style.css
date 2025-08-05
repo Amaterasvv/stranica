@@ -161,33 +161,36 @@ body {
   justify-content: center;
   align-items: center;
   gap: 6px;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
   z-index: 1100;
+  background: transparent;
 }
 
 .hamburger span {
-  width: 30px;
+  width: 32px;
   height: 4px;
-  background: #000; 
+  background: #ffffff; /* BIJELO, da se vidi na tamnoj pozadini */
   border-radius: 2px;
   transition: all 0.3s ease;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.4); /* vidljivost na dark bg */
 }
+
+.hamburger:hover span {
+  background: #a579ff;
+}
+
 
 @media (max-width: 768px) {
   .hamburger {
-    display: flex;
+    display: flex !important;
   }
   .nav-links {
     display: none;
   }
 }
-@media (min-width: 769px) {
-  .hamburger {
-    display: none;
-  }
-}
+
 
 .mobile-menu {
   display: none;
@@ -301,7 +304,8 @@ body {
 .hero-kodeblack-btn {
   padding: 12px 24px;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 15px;
+  font-family:podnaslov;
   border-radius: 6px;
   transition: 0.3s ease;
 }
@@ -535,6 +539,9 @@ body {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+   .grid-wrapper .grid-item:nth-child(n+4) {
+    display: none;
+  }
 
   .radovi-grid {
     max-width: 95%;
@@ -552,6 +559,22 @@ body {
     font-size: 0.95rem;
     padding: 10px 12px;
   }
+    .show-more-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #6e49ff, #9f70ff);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+
+  .show-more-button:hover {
+    background: linear-gradient(90deg, #5b3adf, #8e60f0);
+  }
+
 }
 
 
@@ -653,6 +676,18 @@ body {
   }
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(10px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
 
 
 /* SEKCIJA PAKETA */
@@ -771,16 +806,6 @@ body {
   background: #d64521;
 }
 
-.fade-ins {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-ins.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Mobilna prilagodba */@media (max-width: 600px) {
   .paketi-section {
@@ -1500,7 +1525,7 @@ background-color:  #0f0f0f;
 
 .remote-support .btn-orange:hover,
 .mini-form button:hover {
-  background-color: #93908f;
+  background-color: #232323;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
       text-decoration: none;
 
@@ -1641,32 +1666,38 @@ background-color:  #0f0f0f;
 /* SEKCIJA: DOJMOVI */
 .dojmovi-wrapper {
   display: flex;
-    background: var(--color-light); 
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-light);
+  gap: 30px;
   margin-top: 40px;
-  align-items: flex-start;
-  
 }
 
-.dojmovi-banner {
-  flex: 1 1 300px;
-  max-width: 400px;
-}
 
-.dojmovi-video {
+.svg-pozadina {
+  position: relative;
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  margin-bottom: -40px;
+  z-index: 0;
 }
+
+.svg-pozadina dotlottie-wc {
+  width: 400px;
+  height: 200px;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+
 
 .dojmovi-sadrzaj {
-  flex: 1 1 500px;
-  max-width: 700px;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
 }
+
 
 #dojmovi {
     background: var(--color-light); 
@@ -1676,7 +1707,7 @@ background-color:  #0f0f0f;
 }
 
 .dojmovi-form {
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -1776,6 +1807,16 @@ background-color:  #0f0f0f;
 .ocjena {
   color: #9f70ff;
   font-weight: bold;
+}
+@media (max-width: 600px) {
+  .svgdodatak dotlottie-wc {
+    width: 150px;
+    height: 150px;
+  }
+
+  .dojmovi-sadrzaj {
+    padding: 0 10px;
+  }
 }
 
 /* Footer */
