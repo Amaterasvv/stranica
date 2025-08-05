@@ -5,23 +5,6 @@ function toggleMenu() {
   menu.classList.toggle("show");
   overlay.classList.toggle("show");
 }
-document.addEventListener("DOMContentLoaded", function () {
-  const fadeElementss = document.querySelectorAll('.fade-in');
-
-  const fadeObserverr = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        fadeObserverr.unobserve(entry.target); // animacija samo jednom
-      }
-    });
-  }, { threshold: 0.1 });
-
-fadeElementss.forEach((el, index) => {
-  el.style.transitionDelay = `${index * 0.2}s`; // npr. 0s, 0.2s, 0.4s
-  fadeObserverr.observe(el);
-});
-});
 
 document.getElementById("overlay").addEventListener("click", () => {
   document.getElementById("mobile-menu").classList.remove("show");

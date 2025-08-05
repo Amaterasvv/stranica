@@ -62,10 +62,10 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(170, 170, 170, 0.8);
+  background-color: rgba(140, 140, 140, 0.8);
   backdrop-filter: blur(10px);
   z-index: 999;
-  color: #fff;
+  color: #ffffff;
   font-family: 'akira', sans-serif;
   padding: 10px 0;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
@@ -129,7 +129,7 @@ body {
 }
 
 .nav-links a {
-  color: #e2e2e2;
+  color: #d8d8d8;
   position: relative;
   text-decoration: none;
   font-weight: 500;
@@ -516,6 +516,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  color: #000;
   right: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -1076,7 +1077,7 @@ body {
 }
 
 .switch-opcija:hover {
-  background: #e5e5e5;
+  background: #fcd2ff;
 }
 
 .switch-opcija input[type="checkbox"] {
@@ -1109,12 +1110,12 @@ body {
 }
 
 .switch-opcija input[type="checkbox"]:checked ~ * {
-  background-color: #d2ffec; 
+  background-color: #fcd2ff; 
 }
 
 .switch-opcija:has(input[type="checkbox"]:checked) {
-  background-color: #d2ffe0; 
-  border-color: #40aa66;
+  background-color: #fcd2ff; 
+  border-color: #fcd2ff;
 }
 
 
@@ -1140,7 +1141,7 @@ body {
 
 .budzet-slider input[type="range"] {
   width: 100%;
-  accent-color: #000;
+  accent-color: #fcd2ff;
 }
 
 .budzet-iznos {
@@ -1368,63 +1369,6 @@ background-color:  #0f0f0f;
     max-width:49%;
   }
 }
-
-
-.galerija-sekcija1 {
-  padding: 40px 20px; 
-  background: var(--color-light); 
-  overflow-x: auto; 
-}
-
-.okviri-wrapper1 {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap; 
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.okvir {
-  width: 200px;
-  height: 500px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  overflow: hidden;
-
-}
-.okvir {
-  opacity: 0;
-  filter: blur(10px);
-  transform: scale(0.8);
-  transition: all 0.8s ease;
-}
-
-.okvir.active {
-  opacity: 1;
-  filter: blur(0);
-  transform: scale(1);
-}
-
-
-.okvir img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-@media (max-width: 1268px) {
-  .galerija-sekcija1 {
-    display: none;
-  }
-}
-
-
-
-
-
-
 
 /* POMOĆ sekcija */
 #pomoc {
