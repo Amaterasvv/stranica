@@ -1613,6 +1613,20 @@ background-color:  #0f0f0f;
     transform: scale(1);
   }
 }
+@media (max-width: 600px) {
+  .support-stats-wide {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .support-stats-wide .stat {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
 
 /* SEKCIJA: O NAMA */
 .section-o-nama {
