@@ -19,9 +19,9 @@
 </div>
 
 
-<header class="navbar">
+<header class="navbar" id="hero">
   <div class="nav-container">
-    <a href="index.html" class="logo">
+    <a href="index.html#hero" class="logo">
       <img src="conten/logogogo.png" alt="Kode Black" />
     </a>
 
@@ -33,18 +33,22 @@
       <a href="index.html#pomoc">POMOC</a>
     </nav>
 
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </div>
-
-  <div id="mobile-menu" class="mobile-menu">  
-    <a href="index.html#paketi" onclick="toggleMenu()">USLUGE</a>
-    <a href="index.html#istrazi" onclick="toggleMenu()">REALIZACIJA</a>
-    <a href="index.html#kontakt" onclick="toggleMenu()">KONTAKT</a>
-    <a href="index.html#onama" onclick="toggleMenu()">O NAMA</a>
-    <a href="index.html#pomoc" onclick="toggleMenu()">POMOC</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </header>
 
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html#paketi" onclick="toggleMenu()">USLUGE</a>
+  <a href="index.html#istrazi" onclick="toggleMenu()">REALIZACIJA</a>
+  <a href="index.html#kontakt" onclick="toggleMenu()">KONTAKT</a>
+  <a href="index.html#onama" onclick="toggleMenu()">O NAMA</a>
+  <a href="index.html#pomoc" onclick="toggleMenu()">POMOC</a>
+</div>
+<div id="overlay" class="overlay"></div>
 
 
 <section class="mreze-section">

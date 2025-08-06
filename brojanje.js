@@ -53,21 +53,44 @@ document.addEventListener("DOMContentLoaded", () => {
   animateCounters();
 });
 
+  const muskaImena = ['Marko', 'Mario', 'Ivan', 'Petar', 'Ante', 'Luka', 'Nikola'];
+  const zenskaImena = ['Ana', 'Ivana', 'Marija', 'Katarina', 'Lucija', 'Sara', 'Petra'];
 
-document.addEventListener("DOMContentLoaded", function () {
-  const fadeElementss = document.querySelectorAll('.fade-in');
+  document.querySelectorAll('.dojam-kartica').forEach(kartica => {
+    const autorEl = kartica.querySelector('.autor');
+    const ikonaEl = kartica.querySelector('.profil-ikona');
+    if (!autorEl || !ikonaEl) return;
 
-  const fadeObserverr = new IntersectionObserver((entries) => {
+    const imePrezime = autorEl.textContent.trim();
+    const ime = imePrezime.split(' ')[0];
+
+    if (zenskaImena.includes(ime)) {
+      ikonaEl.classList.add('zensko');
+    } else if (muskaImena.includes(ime)) {
+      ikonaEl.classList.add('musko');
+    } else {
+      ikonaEl.classList.add('neutralno');
+    }
+  });
+
+
+    const paketCards = document.querySelectorAll('.paket-card');
+
+  const observercard = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        fadeObserverr.unobserve(entry.target); // animacija samo jednom
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animira samo jednom
       }
     });
-  }, { threshold: 0.1 });
+  }, {
+    threshold: 0.3
+  });
 
-fadeElementss.forEach((el, index) => {
-  el.style.transitionDelay = `${index * 0.2}s`; // npr. 0s, 0.2s, 0.4s
-  fadeObserverr.observe(el);
-});
-});
+  paketCards.forEach(card => {
+    observercard.observe(card);
+  });
+
+
+
+  

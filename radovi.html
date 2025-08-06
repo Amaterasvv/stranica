@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kode Black</title>
+  <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" href="conten/logogogo.png">
+<script 
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" 
+  type="module">
+</script>
+</head>
+<body>
+
+    <div id="preloader">
+  <img src="conten/loogo.png" alt="Logo" class="preloader-logo" />
+</div>
+
+
+<header class="navbar" id="hero">
+  <div class="nav-container">
+    <a href="#hero" class="logo">
+      <img src="conten/logogogo.png" alt="Kode Black" />
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html#paketi">USLUGE</a>
+      <a href="index.html#istrazi">REALIZACIJA</a>
+      <a href="index.html#kontakt">KONTAKT</a>
+      <a href="index.html#onama">O NAMA</a>
+      <a href="index.html#pomoc">POMOC</a>
+    </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html#paketi" onclick="toggleMenu()">USLUGE</a>
+  <a href="index.html#istrazi" onclick="toggleMenu()">REALIZACIJA</a>
+  <a href="index.html#kontakt" onclick="toggleMenu()">KONTAKT</a>
+  <a href="index.html#onama" onclick="toggleMenu()">O NAMA</a>
+  <a href="index.html#pomoc" onclick="toggleMenu()">POMOC</a>
+</div>
+<div id="overlay" class="overlay"></div>
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <p><strong>KodeBlack</strong> &copy; 2025. Sva prava pridržana.</p>
+    <ul class="footer-nav">
+      <li><a href="#onama">O nama</a></li>
+      <li><a href="#uvjeti">Uvjeti korištenja</a></li>
+      <li><a href="#privatnost">Privatnost</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</footer>
+
+  <script src="brojanje.js"></script>
+  <script src="script.js"></script>
+  <script src="fade.js"></script>
+
+</body>
+</html>
