@@ -548,13 +548,17 @@ body {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-   .grid-wrapper .grid-item:nth-child(n+4) {
-    display: none;
-  }
+.radovi-grid:not(.all-radovi) .grid-wrapper .grid-item:nth-child(n+4) {
+  display: none;
+}
 
   .radovi-grid {
     max-width: 95%;
   }
+  .radovi-grid.all-radovi .show-more-button {
+  display: none !important;
+}
+
 
   .radovi-grid .naslov {
     font-size: 1.8rem;
