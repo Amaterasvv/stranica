@@ -2294,3 +2294,22 @@ background-color:  #0f0f0f;
   100% { transform: scale(1); }
 }
 
+@media (max-width: 640px) {
+  .cta-clean h2 {
+    font-size: 1.4rem; /* manji naslov */
+  }
+
+  .cta-clean p {
+    font-size: 0.95rem; /* manji tekst */
+  }
+
+  .cta-button {
+    padding: 10px 24px; /* manje dugme */
+    font-size: 0.9rem; /* manji font u dugmetu */
+  }
+
+  .cta-icon {
+    width: 50px; /* malo manja ikonica */
+    margin-bottom: 16px;
+  }
+}
