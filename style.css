@@ -765,7 +765,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: var(--color-primary);
+  background:  #B8860B	;
   color: white;
   padding: 4px 10px;
   border-radius: 20px;
@@ -828,6 +828,12 @@ body {
     width: 100%;
     text-align: center;
   }
+    .badge {
+    position: static; /* više nije absolute */
+    display: inline-block;
+    margin-bottom: 10px; /* razmak od naslova */
+  }
+
 
   .paket-card ul li {
     font-size: 0.9rem;
@@ -2050,11 +2056,11 @@ background-color:  #0f0f0f;
   color: #666;
   margin-bottom: 40px;
 }
-
 .mreze-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center; /* centrira sadržaj */
 }
 
 .mreza-item img {
@@ -2091,13 +2097,14 @@ background-color:  #0f0f0f;
 .facebook-posts {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-top: 40px;
 }
 
 .fb-post {
-  width: 560px;
+  max-width: 420px;
+  width: 100%;
   text-align: center;
 }
 
@@ -2117,6 +2124,20 @@ background-color:  #0f0f0f;
   margin-top: 10px;
   font-size: 0.95rem;
   color: #333;
+}
+@media (max-width: 480px) {
+  .mreze-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+  }
+  .mreza-item,
+  .fb-post {
+    max-width: 400px;
+  }
+  .mreza-item video {
+    max-width: 200px;
+    border-radius: 16px;
+  }
 }
 
 .moodboard-section {
@@ -2186,8 +2207,7 @@ background-color:  #0f0f0f;
 
 .insta-grid img:hover {
   transform: scale(1.03);
-}
-.video-mobile-preview {
+}.video-mobile-preview {
   padding: 60px 20px;
   text-align: center;
 }
@@ -2195,7 +2215,7 @@ background-color:  #0f0f0f;
 .video-row {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-top: 30px;
 }
@@ -2205,6 +2225,8 @@ background-color:  #0f0f0f;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-wrapper video {
@@ -2213,11 +2235,6 @@ background-color:  #0f0f0f;
   object-fit: cover;
   display: block;
   background: #000;
-}
-
-.video-wrapper {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-wrapper:hover {
@@ -2239,6 +2256,18 @@ background-color:  #0f0f0f;
 .video-button:hover {
   background-color: #1f2937;
 }
+
+/* --- PRILAGODBA ZA MOBITELE --- */
+@media (max-width: 640px) {
+  .video-wrapper {
+    width: calc(50% - 10px); /* 2 stupca */
+    max-width: 220px;       /* kontrola max širine */
+  }
+  .video-row {
+    gap: 10px; /* manji razmak */
+  }
+}
+
 
 
 :root{
@@ -2329,7 +2358,7 @@ background-color:  #0f0f0f;
 }
 @media (max-width: 640px) {
   .closing-pitch__title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .closing-pitch__text {
     font-size: 0.95rem;
