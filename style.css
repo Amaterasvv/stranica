@@ -183,7 +183,7 @@ body {
 .hamburger span {
   width: 32px;
   height: 4px;
-  background: #ffffff; /* BIJELO, da se vidi na tamnoj pozadini */
+  background: #000000; /* BIJELO, da se vidi na tamnoj pozadini */
   border-radius: 2px;
   transition: all 0.3s ease;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.4); /* vidljivost na dark bg */
@@ -2358,13 +2358,13 @@ background-color:  #0f0f0f;
 }
 @media (max-width: 640px) {
   .closing-pitch__title {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .closing-pitch__text {
-    font-size: 0.95rem;
+    font-size: 0.75rem;
   }
   .closing-pitch__cta {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 10px 20px;
   }
   .closing-pitch__cta svg {
