@@ -618,6 +618,31 @@ body{ padding-top: var(--nav-h); }
   animation: fadeIn 1.5s ease forwards;
   animation-delay: 4s; /* nakon h2 */
 }
+/* Banner responsive fix */
+@media (max-width: 600px) {
+  .typing-text {
+    font-size: clamp(16px, 5vw, 22px); /* manji naslov */
+    letter-spacing: 0.3px;
+  }
+
+  .typing-sub {
+    font-size: 0.85rem; /* manji podnaslov */
+    margin-top: 6px;
+  }
+
+  .mini-banner {
+    padding: 30px 15px; /* malo smanjen padding na mobitelu */
+  }
+}
+
+@media (max-width: 400px) {
+  .typing-text {
+    font-size: clamp(14px, 6vw, 18px);
+  }
+  .typing-sub {
+    font-size: 0.8rem;
+  }
+}
 
 @keyframes typing {
   from { width: 0 }
@@ -3014,7 +3039,10 @@ background: linear-gradient(90deg,rgba(42, 138, 155, 1) 0%, rgba(104, 87, 199, 1
   transition: background 0.3s ease, transform 0.2s ease;
   margin-left: 10px;
 }
-
+/* Email kartica neka zauzme cijeli red na većim širinama */
+@media (min-width: 561px){
+  .kontakt-info-grid .email-card { grid-column: 1 / -1; }
+}
 .theme-toggle:hover {
 
   transform: scale(1.05);
