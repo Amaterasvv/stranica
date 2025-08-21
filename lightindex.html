@@ -1,27 +1,12 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Kode Black</title>
-
-<link id="theme-link" rel="stylesheet" href="style.css">
-<script>
-  (function() {
-    try {
-      var saved = localStorage.getItem('theme');
-      var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-      var theme = saved || (prefersLight ? 'light' : 'dark');
-      var link = document.getElementById('theme-link');
-      if (link) link.href = theme === 'light' ? 'lightstyle.css' : 'style.css';
-      if (!saved) localStorage.setItem('theme', theme);
-    } catch(e) {}
-  })();
-</script>
-
-
+  <link rel="stylesheet" href="lightstyle.css" />
+  
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="icon" type="image/png" href="conten/logogogo.png">
@@ -42,16 +27,10 @@
 <header class="navbar" id="hero">
   <div class="nav-container">
     <a href="#kdhero" class="logo">
-<img id="brand-logo"
-     src="conten/darklogo.png"
-     data-dark="conten/darklogo.png"
-     data-light="conten/darklogo.png"
-     alt="Kode Black" />
-
+      <img src="conten/darklogo.png" alt="Kode Black" />
     </a>
 
     <nav class="nav-links">
-
       <a href="#paketi">USLUGE</a>
       <a href="#istrazi">REALIZACIJA</a>
       <a href="#kontakt">KONTAKT</a>
@@ -82,7 +61,6 @@
 
 <section id="kdhero" class="hero-kb">
   <div class="hero-kb-bg"></div>
-
 
   <div class="hero-kb-inner">
     <div class="hero-kb-left">
@@ -128,9 +106,6 @@
 
 
 <section id="paketi" class="paketi-section">
-  <button id="theme-toggle" class="theme-toggle" aria-label="Promijeni temu">
-  <i class="fa-solid fa-moon"></i>
-</button>
   <div class="paketi-con">
     <h2 class="kontaktnaslov">NAŠE USLUGE</h2>
 
@@ -890,8 +865,7 @@
   </div>
 
   <div class="footer-bottom">
-    <p>© <span id="year"></span> Kode Black</p>
-
+    <p>KodeBlack © 2025. Sva prava pridržana.</p>
     <button class="to-top" aria-label="Na vrh" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
   </div>
 </footer>
@@ -906,7 +880,7 @@
   <script src="brojanje.js"></script>
   <script src="script.js"></script>
   <script src="fade.js"></script>  
-<script src="./faq.js" defer></script>
+  <script src="faq.js defer"></script>
 
 <!-- QRCode.js (≈5 kB) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
