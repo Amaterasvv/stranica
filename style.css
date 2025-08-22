@@ -535,7 +535,7 @@ body{ padding-top: var(--nav-h); }
 /* ===== HERO – responsive refinements (ADD BELOW) ===== */
 
 /* malo kompaktniji layout na tabletima */
-@media (max-width: 1024px){
+@media (max-width: 924px){
   .hero-kb{ padding: clamp(56px, 7vw, 90px) 16px; }
   .hero-title{ line-height: 1.05; }
   .hero-kb-right dotlottie-wc{ max-width: 360px; }
@@ -1896,6 +1896,7 @@ body{ padding-top: var(--nav-h); }
   padding:14px 16px;
   cursor:pointer; user-select:none;
   color: var(--kb-text); font-weight:650;
+  
 }
 .faq .faq-q strong{ font-weight:750; letter-spacing:.2px; }
 .faq .faq-q .chev{
@@ -1910,15 +1911,24 @@ body{ padding-top: var(--nav-h); }
    - sadržaj unutar lagano klizi i fade-a (bez "squish" efekta)
 */
 .faq .faq-a{
-  padding: 0 16px;             /* top/bottom dodajemo u open stanju */
-  height: 0;
-  overflow: clip;               /* izbjegne scrollflash na mobilnim */
+  padding: 0 16px;
+  max-height: 0;        /* umjesto height */
+  overflow: hidden;     /* NE clip */
   opacity: 0;
-  will-change: height, opacity;
+  box-sizing: border-box;
   transition:
-    height .34s cubic-bezier(.22,.61,.36,1),
+    max-height .34s cubic-bezier(.22,.61,.36,1),
     opacity .25s ease;
 }
+
+/* otvoreno stanje */
+.faq li.open .faq-a{
+  padding-top: 8px; 
+  padding-bottom: 12px;
+  opacity: 1;
+}
+
+
 
 /* finese tipografije unutar odgovora */
 .faq .faq-a :where(p, ul, ol, blockquote){
@@ -1959,10 +1969,7 @@ body{ padding-top: var(--nav-h); }
   border-color: rgba(159,112,255,.28);
   background: linear-gradient(180deg, rgba(28,28,33,.86), rgba(23,23,27,.94));
 }
-.faq li.open .faq-a{
-  padding-top: 8px; padding-bottom: 12px;
-  opacity: 1;
-}
+
 .faq li.open .faq-a > *{
   transform: translateY(0);
   opacity: 1;
@@ -2100,6 +2107,27 @@ body{ padding-top: var(--nav-h); }
   .faq, .box{ padding: 14px; }
   .faq .faq-q{ padding: 12px 12px 12px 14px; }
 }
+.faq .faq-q{ width: 100%; background: transparent; border: 0; text-align: left; }
+.faq .faq-a{ display: block !important; }  /* pregazi moguće display:none */
+.faq li{ position: relative; z-index: 0; } /* protiv slučajnih overlay-a */
+.faq .faq-a{ transition: max-height .34s cubic-bezier(.22,.61,.36,1), opacity .25s ease; }
+.faq li.open .faq-a{ opacity:1; }
+
+.faq .faq-q { width:100%; background:transparent; border:0; text-align:left; pointer-events:auto; }
+.faq .faq-a { overflow:hidden; } /* sigurnost */
+.faq .faq-a{
+  box-sizing: border-box;
+  padding: 0 16px;      /* horizontalni padding stalno */
+  overflow: hidden;
+  max-height: 0;
+}
+.faq li.open .faq-a{
+  padding-top: 8px;     /* vertikalni padding samo kad je otvoreno */
+  padding-bottom: 12px;
+}
+
+#overlay { pointer-events: none; opacity: 0; }
+.section-pomoc { position: relative; z-index: 1; }
 
 
 /* SEKCIJA: O NAMA *//* ===== O NAMA (upgrade) ===== */
