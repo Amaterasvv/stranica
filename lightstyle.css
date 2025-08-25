@@ -1502,13 +1502,16 @@ body{ padding-top: var(--nav-h); }
 
 /* ========== POMOĆ I PODRŠKA (light refined v2) ========== */
 
+/* ========== LIGHT VERZIJA ========== */
+
 /* Section */
 .section-pomoc{
   position: relative;
   padding: clamp(56px,6vw,92px) 20px;
-  background: #ffffff;
+  background: #f9f9fb; /* svijetla pozadina */
   overflow: hidden;
   isolation: isolate;
+  color: #111; /* default text tamno */
 }
 
 /* suptilan background glow */
@@ -1516,8 +1519,8 @@ body{ padding-top: var(--nav-h); }
   content:"";
   position: absolute; inset: 0;
   background:
-    radial-gradient(70% 100% at 110% -10%, rgba(91,91,214,.08), transparent 50%),
-    radial-gradient(70% 100% at -10% 110%, rgba(43,184,234,.06), transparent 55%);
+    radial-gradient(70% 100% at 110% -10%, rgba(159,112,255,.12), transparent 50%),
+    radial-gradient(70% 100% at -10% 110%, rgba(122,215,255,.10), transparent 55%);
   pointer-events: none;
   z-index: -1;
 }
@@ -1533,34 +1536,33 @@ body{ padding-top: var(--nav-h); }
 .kontaktnaslov{
   margin: 0 auto clamp(8px,1.4vw,12px);
   text-align: center;
-  color: #111216;
+  color: #111;
   letter-spacing: .35px;
   font-weight: 800;
   text-shadow: none;
 }
 
-/* Osnovni “card” stil */
+/* Osnovni card stil */
 .faq, .box, .support-stats-wide .stat{
-  background: linear-gradient(180deg, #ffffff, #f7f8fb);
+  background: #fff; /* čisto bijelo */
   border: 1px solid rgba(0,0,0,.08);
   border-radius: 14px;
-  box-shadow: 0 3px 10px rgba(0,0,0,.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
 }
 
-/* ---------- FAQ (clean open + bolja tipografija) ---------- */
-
+/* FAQ */
 .faq{
   padding: clamp(16px,2vw,22px);
 }
 .faq > p{
   margin: 0 0 12px;
-  color: #444c59;
+  color: #555;
   opacity: .95;
 }
 .faq > h3{
   margin: 2px 0 12px;
   font-weight: 700;
-  color: #111216;
+  color: #111;
 }
 
 /* lista */
@@ -1577,12 +1579,12 @@ body{ padding-top: var(--nav-h); }
   position: relative;
   border: 1px solid rgba(0,0,0,.08);
   border-radius: 12px;
-  background: #ffffff;
+  background: #fafafa;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
   transition: border-color .25s ease, background .25s ease, box-shadow .25s ease;
 }
-.faq li:hover{ border-color: rgba(0,0,0,.14); }
+.faq li:hover{ border-color: rgba(0,0,0,.16); }
 
 /* lijeva akcent linija */
 .faq li::before{
@@ -1590,7 +1592,7 @@ body{ padding-top: var(--nav-h); }
   position: absolute; left:0; top:10px; bottom:10px;
   width:3px; border-radius: 3px;
   background: linear-gradient(180deg, var(--kb-accent), var(--kb-accent-2));
-  opacity:.75;
+  opacity:.8;
 }
 
 /* pitanje (gumb) */
@@ -1598,84 +1600,103 @@ body{ padding-top: var(--nav-h); }
   display:flex; align-items:center; gap:12px;
   padding:14px 16px;
   cursor:pointer; user-select:none;
-  color: #111216; font-weight:650;
+  color: #111; font-weight:650;
 }
 .faq .faq-q strong{ font-weight:750; letter-spacing:.2px; }
 .faq .faq-q .chev{
   margin-left:auto;
-  font-size:14px; opacity:.75;
+  font-size:14px; opacity:.6;
   transition: transform .28s cubic-bezier(.22,.61,.36,1), opacity .2s ease;
 }
 .faq li.open .faq-q .chev{ transform: rotate(180deg); opacity:1; }
 
-/* ODGOVOR */
+/* odgovor */
 .faq .faq-a{
   padding: 0 16px;
-  height: 0;
-  overflow: clip;
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  will-change: height, opacity;
-  transition:
-    height .34s cubic-bezier(.22,.61,.36,1),
-    opacity .25s ease;
+  transition: max-height .34s cubic-bezier(.22,.61,.36,1), opacity .25s ease;
+  color: #333;
 }
 
-/* tipografija unutar odgovora */
-.faq .faq-a :where(p, ul, ol, blockquote){ margin: 0; }
-.faq .faq-a :where(p + p){ margin-top: 8px; }
-.faq .faq-a :where(ul, ol){ padding-left: 1.1em; margin-top: 6px; }
-.faq .faq-a :where(li){ margin: 4px 0; }
-.faq .faq-a a{
-  color: var(--kb-accent);
-  text-decoration: none;
-  border-bottom: 1px dashed rgba(43,184,234,.25);
-}
-.faq .faq-a a:hover{ border-bottom-color: rgba(43,184,234,.45); }
-
-/* čitljivost teksta */
-.faq .faq-a{ --faqText: color-mix(in oklab, #111216 85%, #b9bdd6 15%); }
-.faq .faq-a,
-.faq .faq-a :where(p, li){
-  color: var(--faqText);
-  font-size: clamp(.97rem, .9vw + .6rem, 1.05rem);
-  line-height: 1.66;
-  letter-spacing: .1px;
-}
-
-/* suptilan slide+fade */
-.faq .faq-a > *{
-  transform: translateY(-4px);
-  opacity: 0;
-  transition: transform .26s ease, opacity .26s ease;
-  transition-delay: .03s;
-}
-
-/* otvoreno stanje */
+/* otvoreno */
 .faq li.open{
-  border-color: rgba(91,91,214,.28);
-  background: linear-gradient(180deg, #f6f7ff, #ffffff);
+  border-color: rgba(159,112,255,.35);
+  background: #fff;
 }
 .faq li.open .faq-a{
   padding-top: 8px; padding-bottom: 12px;
   opacity: 1;
 }
-.faq li.open .faq-a > *{
-  transform: translateY(0);
-  opacity: 1;
+
+/* tipografija */
+.faq .faq-a,
+.faq .faq-a :where(p, li){
+  font-size: clamp(.97rem, .9vw + .6rem, 1.05rem);
+  line-height: 1.66;
+  letter-spacing: .1px;
+  color: #333;
+}
+.faq .faq-a a{
+  color: var(--kb-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(122,215,255,.35);
+}
+.faq .faq-a a:hover{ border-bottom-color: rgba(122,215,255,.55); }
+
+/* Statistike */
+.support-stats-wide{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.support-stats-wide .stat{
+  padding: 18px 16px;
+  text-align: center;
+}
+.support-stats-wide .count{
+  display:block;
+  font-size: clamp(24px, 3.4vw, 34px);
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--kb-accent), var(--kb-accent-2), var(--kb-accent));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: statGradient 8s ease-in-out infinite;
+}
+.support-stats-wide .stat p{
+  margin: 6px 0 0;
+  color: #555;
+  font-size: .95rem;
 }
 
-/* fokus (tipkovnica) */
-.faq .faq-q:focus-visible{
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(91,91,214,.22);
-  border-radius: 10px;
-}
+/* kontakt + forma */
+.box h3{ margin: 0 0 10px; color: #111; font-weight: 700; }
+.box p{ color: #555; }
 
-/* pristupačnost */
-@media (prefers-reduced-motion: reduce){
-  .faq .faq-a,
-  .faq .faq-q .chev,
-  .faq .faq-a > *{ transition:none; }
+.support-contact li{ color: #111; }
+.support-contact i{ color: var(--kb-accent-2); opacity: .9; }
+.support-contact a{ color: var(--kb-accent); }
+
+/* mini-form */
+.mini-form input,
+.mini-form textarea{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.1);
+  color: #111;
+}
+.mini-form input::placeholder,
+.mini-form textarea::placeholder{ color: #999; }
+.mini-form input:focus,
+.mini-form textarea:focus{
+  border-color: rgba(159,112,255,.4);
+  background: #fefefe;
+  box-shadow: 0 0 0 3px rgba(159,112,255,.25);
+}
+.mini-form button{
+  color: #fff;
+  background: linear-gradient(90deg, var(--kb-accent), var(--kb-accent-2));
 }
 
 /* ---------- Statistike (gradient brojevi) ---------- */
@@ -1796,6 +1817,15 @@ body{ padding-top: var(--nav-h); }
   .faq, .box{ padding: 14px; }
   .faq .faq-q{ padding: 12px 12px 12px 14px; }
 }
+
+
+#overlay { pointer-events: none; opacity: 0; }
+.section-pomoc { position: relative; z-index: 1; }
+
+
+
+
+
 /* SEKCIJA: O NAMA (light) */
 /* ===== O NAMA (upgrade light) ===== */
 .section-o-nama{
